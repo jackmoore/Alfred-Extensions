@@ -55,7 +55,7 @@ if [ -z "$1" ] || [ $(stat -f "%m" ~/Library/Caches/com.runningwithcrayons.Alfre
         then
         mkdir ~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow\ Data/dk.aiyo.VirtualBoxControl
     fi
-    VBoxManage list vms -l | sed -n -e '/^Name/N' -e '/\nGroups/P' -e '/\nGuest OS/p' -e '/^Guest OS/P' -e '/^UUID/P' -e '/^State/P' > ~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow\ Data/dk.aiyo.VirtualBoxControl/vms
+    /usr/local/bin/VBoxManage list vms -l | sed -n -e '/^Name/N' -e '/\nGroups/P' -e '/\nGuest OS/p' -e '/^Guest OS/P' -e '/^UUID/P' -e '/^State/P' > ~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow\ Data/dk.aiyo.VirtualBoxControl/vms
 fi
 
 #------------
